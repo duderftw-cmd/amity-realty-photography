@@ -365,7 +365,7 @@
 <img alt="5631 Spinnaker Loop, Lady Lake, FL" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" loading="lazy" src="images/property-3/cover.jpg"/>
 <div class="relative z-20 flex flex-col gap-2 transition-transform duration-500 group-hover:translate-x-2">
 <div class="glass-panel px-3 py-1.5 rounded inline-block self-start border border-outline-variant/15">
-<span class="font-label text-[9px] md:text-[10px] text-primary tracking-widest uppercase">Waypoint</span>
+<span class="font-label text-[9px] md:text-[10px] text-primary tracking-widest uppercase">Twilight &amp; Waypoint</span>
 </div>
 <h3 class="font-headline text-lg md:text-xl font-bold text-white tracking-tight">Lady Lake, FL</h3>
 <p class="text-on-surface-variant text-[10px] md:text-xs mt-1 line-clamp-2">5631 Spinnaker Loop, Lady Lake, FL</p>
@@ -417,7 +417,7 @@
 <span class="material-symbols-outlined chevron transition-transform duration-300 text-primary flex-shrink-0">expand_more</span>
 </summary>
 <div class="px-6 md:px-8 pb-6 md:pb-8 text-on-surface-variant leading-relaxed text-sm md:text-base transition-all duration-300">
-<p>Payment for the shoot is due upon delivery of the photos. You will use Spiro to pay for and download the photos, which allows you to preview the branded versions prior to payment. Once the invoice is paid, Spiro will provide the unbranded, downloadable versions of the photos.</p>
+<p>Your media will be delivered within 24 hours of the shoot via a custom, private property page. Here, you can preview the watermarked gallery and manage your invoice in one convenient location. Once payment is processed, the high-resolution, unbranded files are instantly unlocked and available for download.</p>
 </div>
 </details>
 <details class="group bg-surface-container-low rounded-xl overflow-hidden">
@@ -426,7 +426,7 @@
 <span class="material-symbols-outlined chevron transition-transform duration-300 text-primary flex-shrink-0">expand_more</span>
 </summary>
 <div class="px-6 md:px-8 pb-6 md:pb-8 text-on-surface-variant leading-relaxed text-sm md:text-base transition-all duration-300">
-<p>Photos of a 2500 SQFT home take about an hour. If you are having a 3D Virtual Tour taken as well you can expect the shoot to take an additional hour.</p>
+<p>For a standard 2,500-square-foot property, please allow approximately one hour for the photography session. If your package includes a 3D Virtual Tour, we recommend scheduling an additional hour to ensure every detail of the home is captured with precision</p>
 </div>
 </details>
 <details class="group bg-surface-container-low rounded-xl overflow-hidden">
@@ -435,7 +435,7 @@
 <span class="material-symbols-outlined chevron transition-transform duration-300 text-primary flex-shrink-0">expand_more</span>
 </summary>
 <div class="px-6 md:px-8 pb-6 md:pb-8 text-on-surface-variant leading-relaxed text-sm md:text-base transition-all duration-300">
-<p>If it's looking like it’s going to be a rainy day we may need to reschedule the shoot for another time, however even if there’s gray skies in your photos, our editing team typically adds bright blue skies in post production so the weather does not need to be perfect for your photos to turn out beautifully!</p>
+<p>While we keep a close eye on the forecast, South Georgia and Florida weather can be unpredictable. In the event of heavy rain, we are happy to reschedule your session to the next available opening. However, please note that for overcast or gray days, our post-production team provides professional sky replacements at no extra cost—ensuring your listing always features vibrant, blue-sky imagery regardless of the conditions</p>
 </div>
 </details>
 </div>
@@ -494,16 +494,16 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="space-y-2">
 <label for="phone" class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-on-surface-variant">Phone Number</label>
-<input id="phone" name="phone" class="w-full bg-surface-container border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 text-on-surface p-4 transition-all" placeholder="(555) 000-0000" type="tel"/>
+<input id="phone" name="phone" required class="w-full bg-surface-container border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 text-on-surface p-4 transition-all" placeholder="(555) 000-0000" type="tel"/>
 </div>
 <div class="space-y-2">
 <label for="shoot-date" class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-on-surface-variant">Date of Shoot</label>
-<input id="shoot-date" name="shoot-date" class="w-full bg-surface-container border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 text-on-surface p-4 transition-all appearance-none" type="date"/>
+<input id="shoot-date" name="shoot-date" required class="w-full bg-surface-container border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 text-on-surface p-4 transition-all appearance-none" type="date"/>
 </div>
 </div>
 <div class="space-y-2">
 <label for="property-address" class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-on-surface-variant">Address of Property</label>
-<input id="property-address" name="property-address" class="w-full bg-surface-container border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 text-on-surface p-4 transition-all" placeholder="123 Luxury Dr, Beverly Hills" type="text"/>
+<input id="property-address" name="property-address" required class="w-full bg-surface-container border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 text-on-surface p-4 transition-all" placeholder="123 Luxury Dr, Beverly Hills" type="text"/>
 </div>
 <div class="space-y-2">
 <label for="message" class="text-[10px] md:text-xs font-bold uppercase tracking-widest text-on-surface-variant">Message</label>
@@ -542,11 +542,9 @@
 <div class="flex flex-col space-y-4">
 <span class="text-[#f5bc71] font-headline font-bold text-sm tracking-widest uppercase">Socials</span>
 <div class="flex gap-4">
-<a class="text-white/40 hover:text-[#f5bc71] transition-transform hover:scale-110" href="https://instagram.com/amityrealtyphoto" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
-<a class="text-white/40 hover:text-[#f5bc71] transition-transform hover:scale-110" href="https://tiktok.com/@amityrealtyphoto" target="_blank" rel="noopener noreferrer" aria-label="Follow us on TikTok"><span class="material-symbols-outlined">movie</span></a>
-<a class="text-white/40 hover:text-[#f5bc71] transition-transform hover:scale-110" href="https://facebook.com/amityrealtyphotography" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook"><span class="material-symbols-outlined">person</span></a>
+<a class="text-white/40 hover:text-[#f5bc71] transition-transform hover:scale-110" href="https://www.instagram.com/amityrealtyphotography/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
 </div>
-<p class="text-white/30 text-[10px] uppercase tracking-tighter mt-4">Follow our journey @arch_curator</p>
+<p class="text-white/30 text-[10px] uppercase tracking-tighter mt-4">Follow us @amityrealtyphotography</p>
 </div>
 </div>
 </footer>

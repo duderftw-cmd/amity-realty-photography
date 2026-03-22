@@ -93,9 +93,13 @@ contactForm.addEventListener("submit", function (e) {
     // Validate required fields
     var name = document.getElementById("name");
     var email = document.getElementById("email");
+    var phone = document.getElementById("phone");
+    var shootDate = document.getElementById("shoot-date");
+    var propertyAddress = document.getElementById("property-address");
     var message = document.getElementById("message");
 
-    if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
+    if (!name.value.trim() || !email.value.trim() || !phone.value.trim() ||
+        !shootDate.value || !propertyAddress.value.trim() || !message.value.trim()) {
         showError("Please fill in all required fields.");
         return;
     }
@@ -155,7 +159,7 @@ function buildImageList(folder, count) {
 var galleryData = [
     { images: buildImageList("images/property-1", 8), name: "Hernando, FL", category: "Twilight" },
     { images: buildImageList("images/property-2", 8), name: "Hernando, FL", category: "Plain" },
-    { images: buildImageList("images/property-3", 9), name: "Lady Lake, FL", category: "Waypoint" },
+    { images: buildImageList("images/property-3", 9), name: "Lady Lake, FL", category: "Twilight & Waypoint" },
     { images: buildImageList("images/property-4", 12), name: "Citrus Springs, FL", category: "Virtual Staging" },
 ];
 
