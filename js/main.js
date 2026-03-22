@@ -159,7 +159,7 @@ function buildImageList(folder, count) {
 var galleryData = [
     { images: buildImageList("images/property-1", 8), name: "Hernando, FL", category: "Twilight" },
     { images: buildImageList("images/property-2", 8), name: "Hernando, FL", category: "Plain" },
-    { images: buildImageList("images/property-3", 9), name: "Lady Lake, FL", category: "Twilight & Waypoint" },
+    { images: buildImageList("images/property-3", 8), name: "Lady Lake, FL", category: "Twilight & Waypoint" },
     { images: buildImageList("images/property-4", 12), name: "Citrus Springs, FL", category: "Virtual Staging" },
 ];
 
