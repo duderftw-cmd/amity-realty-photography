@@ -143,34 +143,59 @@ function hideError() {
 }
 
 // ── Gallery Lightbox ──────────────────────────────────────────
+function buildImageList(folder, count) {
+    var images = [folder + "/cover.jpg"];
+    for (var i = 1; i <= count; i++) {
+        var num = i < 10 ? "0" + i : "" + i;
+        images.push(folder + "/" + num + ".jpg");
+    }
+    return images;
+}
+
 var galleryData = [
-    { image: "images/property-1/cover.jpg", name: "The Obsidian Estate", category: "Cinematic Series" },
-    { image: "images/property-2/cover.jpg", name: "Azure Heights", category: "High-Rise" },
-    { image: "images/property-3/cover.jpg", name: "Culinary Loft", category: "Lifestyle" },
-    { image: "images/property-4/cover.jpg", name: "Zenith Pavilion", category: "Interior Design" },
+    { images: buildImageList("images/property-1", 8), name: "The Obsidian Estate", category: "Cinematic Series" },
+    { images: buildImageList("images/property-2", 8), name: "Azure Heights", category: "High-Rise" },
+    { images: buildImageList("images/property-3", 9), name: "Culinary Loft", category: "Lifestyle" },
+    { images: buildImageList("images/property-4", 12), name: "Zenith Pavilion", category: "Interior Design" },
 ];
 
 var lightbox = document.getElementById("lightbox");
 var lightboxImg = document.getElementById("lightbox-img");
 var lightboxTitle = document.getElementById("lightbox-title");
 var lightboxCategory = document.getElementById("lightbox-category");
+var lightboxCounter = document.getElementById("lightbox-counter");
 var lightboxCloseBtn = document.getElementById("lightbox-close");
 var lightboxPrev = document.getElementById("lightbox-prev");
 var lightboxNext = document.getElementById("lightbox-next");
-var currentGalleryIndex = 0;
+var currentPropertyIndex = 0;
+var currentPhotoIndex = 0;
 var galleryTriggerEl = null;
 
 var galleryCards = document.querySelectorAll("#samples .grid > div");
 
-function showLightbox(index) {
-    currentGalleryIndex = index;
-    var item = galleryData[index];
-    lightboxImg.src = item.image;
-    lightboxImg.alt = item.name;
-    lightboxTitle.textContent = item.name;
-    lightboxCategory.textContent = item.category;
+function preloadImages(propertyIndex, fromPhoto) {
+    var images = galleryData[propertyIndex].images;
+    for (var i = 1; i <= 2; i++) {
+        var idx = fromPhoto + i;
+        if (idx < images.length) {
+            var img = new Image();
+            img.src = images[idx];
+        }
+    }
+}
+
+function showLightbox(propertyIndex, photoIndex) {
+    currentPropertyIndex = propertyIndex;
+    currentPhotoIndex = photoIndex;
+    var property = galleryData[propertyIndex];
+    lightboxImg.src = property.images[photoIndex];
+    lightboxImg.alt = property.name + " — photo " + (photoIndex + 1);
+    lightboxTitle.textContent = property.name;
+    lightboxCategory.textContent = property.category;
+    lightboxCounter.textContent = (photoIndex + 1) + " / " + property.images.length;
     lightbox.classList.add("is-open");
     document.body.classList.add("overflow-hidden");
+    preloadImages(propertyIndex, photoIndex);
 }
 
 function closeLightbox() {
@@ -183,19 +208,21 @@ function closeLightbox() {
 }
 
 function lightboxPrevSlide() {
-    var index = (currentGalleryIndex - 1 + galleryData.length) % galleryData.length;
-    showLightbox(index);
+    var images = galleryData[currentPropertyIndex].images;
+    var index = (currentPhotoIndex - 1 + images.length) % images.length;
+    showLightbox(currentPropertyIndex, index);
 }
 
 function lightboxNextSlide() {
-    var index = (currentGalleryIndex + 1) % galleryData.length;
-    showLightbox(index);
+    var images = galleryData[currentPropertyIndex].images;
+    var index = (currentPhotoIndex + 1) % images.length;
+    showLightbox(currentPropertyIndex, index);
 }
 
 galleryCards.forEach(function (card, i) {
     card.addEventListener("click", function () {
         galleryTriggerEl = card;
-        showLightbox(i);
+        showLightbox(i, 0);
     });
 });
 
