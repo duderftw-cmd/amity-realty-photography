@@ -153,10 +153,10 @@ function buildImageList(folder, count) {
 }
 
 var galleryData = [
-    { images: buildImageList("images/property-1", 8), name: "The Obsidian Estate", category: "Cinematic Series" },
-    { images: buildImageList("images/property-2", 8), name: "Azure Heights", category: "High-Rise" },
-    { images: buildImageList("images/property-3", 9), name: "Culinary Loft", category: "Lifestyle" },
-    { images: buildImageList("images/property-4", 12), name: "Zenith Pavilion", category: "Interior Design" },
+    { images: buildImageList("images/property-1", 8), name: "Hernando, FL", category: "Twilight" },
+    { images: buildImageList("images/property-2", 8), name: "Hernando, FL", category: "Plain" },
+    { images: buildImageList("images/property-3", 9), name: "Lady Lake, FL", category: "Waypoint" },
+    { images: buildImageList("images/property-4", 12), name: "Citrus Springs, FL", category: "Virtual Staging" },
 ];
 
 var lightbox = document.getElementById("lightbox");
