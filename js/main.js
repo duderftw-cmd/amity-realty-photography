@@ -249,6 +249,26 @@ document.addEventListener("keydown", function (e) {
     if (e.key === "ArrowRight") lightboxNextSlide();
 });
 
+// Touch swipe support
+var touchStartX = 0;
+var touchEndX = 0;
+var SWIPE_THRESHOLD = 50;
+
+lightbox.addEventListener("touchstart", function (e) {
+    touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+
+lightbox.addEventListener("touchend", function (e) {
+    touchEndX = e.changedTouches[0].screenX;
+    var diff = touchStartX - touchEndX;
+    if (Math.abs(diff) < SWIPE_THRESHOLD) return;
+    if (diff > 0) {
+        lightboxNextSlide();
+    } else {
+        lightboxPrevSlide();
+    }
+});
+
 // ── Active Nav Highlighting ───────────────────────────────────
 var navLinks = document.querySelectorAll("#desktop-nav .nav-link");
 var navSectionIds = ["process", "pricing", "samples", "faq", "contact"];
