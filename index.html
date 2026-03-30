@@ -27,12 +27,91 @@
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Amity Realty Photography",
-  "telephone": "(352) 421-3730",
-  "email": "contact@amityrealtyphotography.com",
   "url": "https://amityrealtyphotography.com",
-  "image": "images/hero.jpg",
-  "areaServed": ["Florida", "Georgia"],
-  "priceRange": "$$"
+  "logo": "https://amityrealtyphotography.com/images/logo.png",
+  "image": "https://amityrealtyphotography.com/images/hero.jpg",
+  "description": "Professional real estate photography in Ocala, Central Florida, and metro Atlanta. HDR listing photos, drone aerials, 3D Matterport tours, virtual staging, and next-day delivery.",
+  "telephone": "+1-352-421-3730",
+  "email": "contact@amityrealtyphotography.com",
+  "priceRange": "$110-$150",
+  "sameAs": [
+    "https://www.instagram.com/amityrealtyphotography/"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ocala",
+    "addressRegion": "FL",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Ocala",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Marion County, FL"
+      }
+    },
+    {
+      "@type": "State",
+      "name": "Florida",
+      "description": "Central Florida region"
+    },
+    {
+      "@type": "City",
+      "name": "Atlanta",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Fulton County, GA"
+      }
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Photography Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Real Estate Photography",
+          "description": "Professional HDR listing photos with manual editing, color correction, and digital cleaning. 30-60 edited photos with 24-hour delivery."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Drone Aerial Photography & Videography",
+          "description": "Aerial imagery and videography included with all property packages."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "3D Matterport Virtual Tours",
+          "description": "Immersive 3D virtual tours with floor plans included. Available as an add-on starting at $150."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Virtual Staging & Twilight Editing",
+          "description": "Virtual staging and twilight photo editing at $10 per image with unlimited revisions."
+        }
+      }
+    ]
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+    ],
+    "opens": "07:00",
+    "closes": "20:00"
+  }
 }
 </script>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
