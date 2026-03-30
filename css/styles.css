@@ -1,7 +1,27 @@
-      /* Smooth Scrolling & Header Offset */
+      /* Smooth Scrolling */
       html {
         scroll-behavior: smooth;
-        scroll-padding-top: 140px;
+      }
+
+      /* Per-section scroll offsets */
+      #process {
+        scroll-margin-top: 80px;
+      }
+
+      #pricing {
+        scroll-margin-top: 140px;
+      }
+
+      #samples {
+        scroll-margin-top: 140px;
+      }
+
+      #faq {
+        scroll-margin-top: 80px;
+      }
+
+      #contact {
+        scroll-margin-top: 80px;
       }
 
       /* Focus Styles */
