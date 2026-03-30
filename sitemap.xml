@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://amityrealtyphotography.com/</loc>
-    <lastmod>2025-03-21</lastmod>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://amityrealtyphotography.com/images/hero.jpg</image:loc>
+      <image:title>Premium real estate photography in Ocala and Atlanta</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://amityrealtyphotography.com/images/property-1/cover.jpg</image:loc>
+      <image:title>Twilight real estate photography Hernando FL</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://amityrealtyphotography.com/images/property-2/cover.jpg</image:loc>
+      <image:title>Listing photography Hernando FL</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://amityrealtyphotography.com/images/property-3/cover.jpg</image:loc>
+      <image:title>Aerial drone photography Lady Lake FL</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://amityrealtyphotography.com/images/property-4/cover.jpg</image:loc>
+      <image:title>Virtual staging Citrus Springs FL</image:title>
+    </image:image>
   </url>
 </urlset>
